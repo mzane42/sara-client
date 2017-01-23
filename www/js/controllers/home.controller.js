@@ -25,10 +25,6 @@ angular.module('starter')
               map: $scope.map,
               animation: google.maps.Animation.DROP,
               position: latLng,
-              icon: new google.maps.MarkerImage(im,
-                new google.maps.Size(22,22),
-                new google.maps.Point(0,18),
-                new google.maps.Point(11,11))
             });
 
             var infoWindow = new google.maps.InfoWindow({
