@@ -1,0 +1,126 @@
+/* Empty. Add your own CSS if you like */
+
+/* home */
+
+.scroll {
+  height: 100%;
+}
+
+#map {
+  width: 100%;
+  height: 60%;
+}
+
+.actions-btn {
+  display: inline-block;
+  position: absolute;
+  bottom: 44%;
+  right: 0;
+}
+
+.actions-img {
+  width: 90px;
+  height: 90px;
+  padding: 9px;
+  background: #FF6471;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+}
+
+.directions-container {
+  background: #99CFD9;
+  height: 40%;
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-flex-direction: column;
+}
+
+.directions-container > .row {
+  /*-webkit-flex: 1;*/
+}
+
+.search-input {
+  padding: 10px;
+  text-align: center;
+  min-height: 40px;
+  font-size: 18px !important;
+}
+
+.search-group {
+  align-items: center;
+  justify-content: center;
+}
+
+.row.itineraries-group {
+  -webkit-flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.itineraries-group > a.button.button-full {
+  margin: 0;
+  height: 45px;
+  min-width: 90%;
+  text-align: left;
+  color: #a5a3a3;
+  border: 1px solid #f7f7f7;
+}
+
+.additionals-itinerary {
+  margin: 0;
+  min-width: 90%;
+  text-align: center;
+  color: white;
+  background: #a9dfe8;
+  padding: 4px;
+  font-size: 24px;
+}
+
+.policy-privacy {
+  color: #191919;
+}
+
+.policy-privacy:hover, .policy-privacy:active {
+  color: #ff6471;
+}
+
+/* navbar */
+
+.platform-android .bar .title{
+  text-align: center;
+  left: 0 !important;
+}
+
+.profil-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+}
+
+.profil {
+  -webkit-flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  color: #FFFFFF;
+  font-weight: bold;
+  letter-spacing: 1.6px;
+  font-size: 16px;
+}
+
+.profil-informations {
+  background: #FF6471;
+  -webkit-flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-wrapper {
+  -webkit-flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
