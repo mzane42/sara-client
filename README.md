@@ -1,2 +1,2 @@
-# sara-client
-Academie DesignThinking Hec project
+# Sara-client
+Academie DesignThinking HEC project
