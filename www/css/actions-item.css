@@ -47,7 +47,7 @@
 .action-btn {
   width: 80px;
   height: 80px;
-  padding: 11px;
+  padding: 11px 7px;
   background: #FF6471;
   border-radius: 50%;
   display: block;
@@ -64,10 +64,20 @@
 
 .action-call {
   background: #ffb34b;
+  padding: 6px 9px;
+}
+
+.action-call > img {
+  width: 56px;
 }
 
 .action-tracking {
   background: #81d6a5;
+  padding: 8px 19px;
+}
+
+.action-tracking > img {
+  width: 35px;
 }
 
 .action-verbal {
@@ -75,8 +85,7 @@
 }
 
 .action-img {
-  width: 50px;
-  height: 50px;
+  width: 60px;
 }
 
 
