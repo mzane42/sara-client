@@ -3,9 +3,10 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('starter', ['ionic', 'ngCordova', 'uiRouterStyles'])
+angular.module('starter', ['ionic', 'ngCordova', 'uiRouterStyles', 'google.places'])
   .run(run)
   .controller('MainCtrl', MainCtrl)
+  .config(config)
 
 function MainCtrl($scope, $ionicSideMenuDelegate) {
   console.log('MainCtrl');
@@ -14,8 +15,17 @@ function MainCtrl($scope, $ionicSideMenuDelegate) {
     $ionicSideMenuDelegate.toggleLeft();
   };
 
+}
+
+function config($ionicConfigProvider) {
+  $ionicConfigProvider.views.maxCache(5);
+
+  // note that you can also chain configs
+  $ionicConfigProvider.backButton.previousTitleText(false)
+  $ionicConfigProvider.backButton.text(false)
 
 }
+
 function run($ionicPlatform) {
   $ionicPlatform.ready(function() {
     if(window.cordova && window.cordova.plugins.Keyboard) {

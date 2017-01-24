@@ -8,14 +8,27 @@
 
 #map {
   width: 100%;
-  height: 60%;
+  height: 100%;
 }
 
 .actions-btn {
   display: inline-block;
   position: absolute;
-  bottom: 44%;
+  bottom: 0;
   right: 0;
+}
+
+.home-container {
+  flex-direction: column;
+  height: 100%;
+  background: #99cfd9;
+  padding: 0;
+}
+
+.map-container {
+  position: relative;
+  height: 60%;
+  padding: 0;
 }
 
 .actions-img {
@@ -29,7 +42,7 @@
 
 .directions-container {
   background: #99CFD9;
-  height: 40%;
+  padding-top: 20px !important;
   display: -webkit-flex;
   align-items: center;
   justify-content: center;
@@ -42,14 +55,38 @@
 
 .search-input {
   padding: 10px;
-  text-align: center;
   min-height: 40px;
+  font-size: 14px !important;
+  border: 0;
+}
+
+::-webkit-input-placeholder {
+  text-align: center;
+  font-size: 18px !important;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  text-align: center;
+  font-size: 18px !important;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  text-align: center;
+  font-size: 18px !important;
+}
+
+:-ms-input-placeholder {
+  text-align: center;
   font-size: 18px !important;
 }
 
 .search-group {
   align-items: center;
   justify-content: center;
+  /*flex-direction: column;*/
+}
+
+.search-btn {
 }
 
 .row.itineraries-group {
@@ -84,6 +121,50 @@
 
 .policy-privacy:hover, .policy-privacy:active {
   color: #ff6471;
+}
+
+/* login */
+.login-container {
+  padding:0;
+  background: linear-gradient( rgba(2, 212, 251, 0.45), rgba(58, 58, 58, 0.45) ), url(../img/login-background.jpg) no-repeat center fixed;
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: cover; /* version standardisée */
+}
+
+.login-logo {
+  height: 50%;
+}
+
+.logo-name {
+  color: #ffffff;
+  font-size: 35px;
+}
+
+.logo-baseline {
+  font-weight: 100;
+}
+
+.logo-image {
+  width: 100px;
+  height: 100px;
+}
+
+.social-button-facebook {
+  background: #29487d;
+  color: white;
+}
+
+.social-button-facebook:active, .social-button-facebook:hover {
+  color: white;
+  background: #29487d;
+}
+
+.logo-baseline {
+  color: white;
+}
+
+.login-btn-container {
+  height: 50%;
 }
 
 /* navbar */

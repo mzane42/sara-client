@@ -2,11 +2,13 @@ angular.module('starter')
   .controller('homeCtrl', homeCtrl);
 
 
-    function homeCtrl($scope, $cordovaGeolocation, $ionicPlatform) {
+    function homeCtrl($scope, $cordovaGeolocation, $ionicPlatform, $location, $ionicHistory) {
 
       function pollCurrentLocation() {
         var options = {enableHighAccuracy: true, maximumAge:3000, timeout: 5000};
-
+        $scope.autocompleteOptions = {
+          componentRestrictions: {country: 'fr'}
+        }
         $cordovaGeolocation.getCurrentPosition(options).then(function(position){
 
           var latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
@@ -17,7 +19,6 @@ angular.module('starter')
             disableDefaultUI: true,
             mapTypeId: google.maps.MapTypeId.ROADMAP
           };
-          var im = 'http://www.robotwoods.com/dev/misc/bluecircle.png';
           $scope.map = new google.maps.Map(document.getElementById("map"), mapOptions);
           google.maps.event.addListenerOnce($scope.map, 'idle', function(){
 
@@ -41,9 +42,25 @@ angular.module('starter')
           console.log("Could not get location");
         });
       }
-
       $ionicPlatform.ready(function() {
-          pollCurrentLocation();
+/*          $cordovaKeyboard.isVisible()
+            .then(function (res) {
+              console.log(res)
+            })
+            .catch(function (err) {
+              console.log(err)
+            })
+          $scope.test = 2;*/
+
+        $ionicPlatform.registerBackButtonAction(function (event) {
+          if($location.path() === "/home"){
+          }
+          else {
+            $ionicHistory.goBack();
+          }
+        }, 100);
+
+        pollCurrentLocation();
         });
 
         console.log('home controller');
